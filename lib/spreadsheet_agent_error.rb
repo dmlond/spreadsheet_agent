@@ -1,0 +1,4 @@
+class SpreadsheetAgentError < RuntimeError
+  
+end
+

@@ -1,0 +1,13 @@
+---
+guser: dmlond@gmail.com
+gpass: dyarvckqviimvyuv
+spreadsheet_name: google_agent_test
+reply_email: test_reply@test.com
+send_to: test_send@test.com
+key_fields:
+  testentry:
+    rank: 2
+    required: 1
+  testpage:
+    rank: 1
+    required: 1
