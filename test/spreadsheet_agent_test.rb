@@ -10,15 +10,13 @@ class TC_SpreadsheetAgentTest < Test::Unit::TestCase
   context 'Agent' do
 
     setup do
-      @config_file = File.expand_path(File.dirname( $0 )) + '/../config/agent.conf.yml'
+      @config_file = File.expand_path(File.dirname( __FILE__ )) + '/../config/agent.conf.yml'
 
       unless File.exists? @config_file
         $stderr.puts "You must create a valid test Google Spreadsheet and a valid #{ @config_file } configuration file pointing to it to run the tests. See README.txt file for more information on how to run the tests."
         exit(1)
       end
     
-      @config = Psych.load_file(@config_file)
-
       @testing_page_name = 'testing'
       @keys = { 'testentry' => 'test', 'testpage' => @testing_page_name }
       @testing_page = nil
@@ -42,10 +40,12 @@ class TC_SpreadsheetAgentTest < Test::Unit::TestCase
         google_agent = SpreadsheetAgent::Agent.new(
                                             :agent_name => 'instantiate',
                                             :page_name => @testing_page_name,
-                                            :keys => @keys
+                                            :keys => @keys,
+                                            :config_file => @config_file
                                             )
         assert_not_nil google_agent, 'google_agent is nil!'
         assert_instance_of(SpreadsheetAgent::Agent, google_agent)
+        
       end
 
     end #instantiated
@@ -377,7 +377,8 @@ class TC_SpreadsheetAgentTest < Test::Unit::TestCase
       :agent_name => agent,
       :page_name => @testing_page_name,
       :keys => @keys,
-      :debug => true
+      :debug => true,
+      :config_file => @config_file
     }
     unless extra_params.nil?
       init_params.merge!(extra_params)

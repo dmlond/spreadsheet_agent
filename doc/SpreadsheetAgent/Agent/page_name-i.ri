@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"page_name:EFI"&SpreadsheetAgent::Agent#page_name;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"iThe name of the Page on the Google Spreadsheet that contains the record to be worked on by the agent;T:
+@file0FI"lib/spreadsheet_agent.rb;T

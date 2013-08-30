@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"only_pages:EFI"(SpreadsheetAgent::Runner#only_pages;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"\Readonly access to the array of pages to be processed.  Only pages will only be defined;TI"fwhen :only_pages or :skip_pages are defined in the constructor params, or when the skip_pages_if,;TI")or only_pages_if methods are called.;T:
+@file0FI"$lib/spreadsheet_agent/runner.rb;T

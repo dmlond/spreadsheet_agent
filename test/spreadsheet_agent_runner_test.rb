@@ -9,7 +9,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
   context 'Runner' do
 
     setup do
-      @config_file = File.expand_path(File.dirname( $0 )) + '/../config/agent.conf.yml'
+      @config_file = File.expand_path(File.dirname( __FILE__ )) + '/../config/agent.conf.yml'
 
       unless File.exists? @config_file
         $stderr.puts "You must create a valid test Google Spreadsheet and a valid #{ @config_file } configuration file pointing to it to run the tests. See README.txt file for more information on how to run the tests."
@@ -21,7 +21,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
     end
 
     teardown do
-      runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin)
+      runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :config_file => @config_file)
       if runner.db.worksheet_by_title('testing').nil?
         tpage = runner.db.add_worksheet('testing')
         tpage.max_rows = 2
@@ -38,7 +38,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
     context 'instantiated' do
 
      should 'be a SpreadsheetAgent::Runner' do
-        runner = SpreadsheetAgent::Runner.new
+        runner = SpreadsheetAgent::Runner.new(:config_file => @config_file)
         assert_not_nil runner, 'runner is nil!'
         assert_instance_of(SpreadsheetAgent::Runner, runner)
       end
@@ -48,13 +48,13 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
     context 'agent_bin' do
 
       should 'have a sensible default' do
-        expected_agent_bin = find_bin() + '../agent_bin'
-        runner = SpreadsheetAgent::Runner.new
+        expected_agent_bin = File.expand_path(File.dirname( $0 )) + '/../agent_bin'
+        runner = SpreadsheetAgent::Runner.new(:config_file => @config_file)
         assert_equal expected_agent_bin, runner.agent_bin
       end
 
       should 'be overridable on construction' do
-        runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin)
+        runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :config_file => @config_file)
         assert_equal @test_agent_bin, runner.agent_bin
       end
 
@@ -191,7 +191,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
 
         # should 'allow debug to be set and print output to STDERR' do
         reset_testing_pages(@testing_pages, true)
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :debug => true)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :debug => true, :config_file => @config_file)
         assert @runner.debug, 'debug should be true'
         debug_output = CaptureIO.new
         debug_output.start
@@ -211,7 +211,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
 
         # should 'allow dry_run to be set, and not run any entries, but set debug to true' do
         reset_testing_pages(@testing_pages, true)
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :dry_run => true)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :dry_run => true, :config_file => @config_file)
         assert @runner.debug, 'debug should be true with dry run'
 
         dry_output = CaptureIO.new
@@ -233,7 +233,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
         # should 'allow sleep_between to be set, and sleep that amount between process for each entry' do
         reset_testing_pages(@testing_pages, true)
         expected_time_between = 10
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :sleep_between => expected_time_between)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :sleep_between => expected_time_between,:config_file => @config_file)
 
         beginning_time = Time.now
         first_time = true
@@ -301,7 +301,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
 
         #should 'allow only_pages to be set and only process @only_pages' do
         @test_only_pages = ['foo_page', 'baz_page']
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :only_pages => @test_only_pages)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :only_pages => @test_only_pages, :config_file => @config_file)
         @testing_pages.push(add_page_to_runner(@runner, 'baz', @headers, @entries))
 
 
@@ -324,7 +324,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
         end
 
         #should 'allow only_pages_if to be set and only process those pages' do
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin,:config_file => @config_file)
         reset_testing_pages(@testing_pages, true)
         
         @runner.only_pages_if{ |title|
@@ -348,7 +348,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
 
         #should 'allow skip_pages to be set and only process pages not in @skip_pages' do
         @test_skip_pages = ['foo_page', 'baz_page']
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :skip_pages => @test_skip_pages)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin, :skip_pages => @test_skip_pages,:config_file => @config_file)
         reset_testing_pages(@testing_pages, true)
         expected_to_run = {}
         @testing_pages.each do |page|
@@ -374,7 +374,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
         end
 
         #should 'allow skip_pages_if to be set and only process pages not skipped by the code' do
-        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin)
+        @runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin,:config_file => @config_file)
         reset_testing_pages(@testing_pages, true)
         
         @runner.skip_pages_if { |title|
@@ -399,11 +399,11 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
   end #Runner
 
   def find_bin()
-    File.expand_path(File.dirname( $0 )) + '/'
+    File.expand_path(File.dirname( __FILE__ )) + '/'
   end
 
   def prepare_runner(pages, headers, entries)
-    runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin)
+    runner = SpreadsheetAgent::Runner.new(:agent_bin => @test_agent_bin,:config_file => @config_file)
     @testing_pages = []
     
     pages.each do |page|

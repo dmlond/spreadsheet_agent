@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: SpreadsheetAgent</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/spreadsheet_agent/db_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/spreadsheet_agent/db.rb">lib/spreadsheet_agent/db.rb</a></li>
+          
+            <li><a href="./lib/spreadsheet_agent/error_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/spreadsheet_agent/error.rb">lib/spreadsheet_agent/error.rb</a></li>
+          
+            <li><a href="./lib/spreadsheet_agent/runner_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/spreadsheet_agent/runner.rb">lib/spreadsheet_agent/runner.rb</a></li>
+          
+            <li><a href="./lib/spreadsheet_agent_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/spreadsheet_agent.rb">lib/spreadsheet_agent.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="SpreadsheetAgent/Agent.html">SpreadsheetAgent::Agent</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SpreadsheetAgent/Db.html">SpreadsheetAgent::Db</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SpreadsheetAgent/Error.html">SpreadsheetAgent::Error</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SpreadsheetAgent/Runner.html">SpreadsheetAgent::Runner</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./SpreadsheetAgent.html">SpreadsheetAgent</a></li>
+        
+          <li><a href="./SpreadsheetAgent/Agent.html">SpreadsheetAgent::Agent</a></li>
+        
+          <li><a href="./SpreadsheetAgent/Db.html">SpreadsheetAgent::Db</a></li>
+        
+          <li><a href="./SpreadsheetAgent/Error.html">SpreadsheetAgent::Error</a></li>
+        
+          <li><a href="./SpreadsheetAgent/Runner.html">SpreadsheetAgent::Runner</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">SpreadsheetAgent</h1>
+
+    <div id="description" class="description">
+      
+<p>A Distributed <a href="SpreadsheetAgent/Agent.html">Agent</a> System using
+Google Spreadsheets</p>
+
+<p>Version 0.01</p>
+
+<p><a href="SpreadsheetAgent.html">SpreadsheetAgent</a> is a framework for
+creating massively distributed pipelines across many different servers,
+each using the same google spreadsheet as a control panel.  It is
+extensible, and flexible.  It doesnt specify what goals any pipeline should
+be working towards, or which goals are prerequisites for other goals, but
+it does provide logic for easily defining these relationships based on your
+own needs.  It does this by providing a subsumption architecture, whereby
+many small, highly focused agents are written to perform specific goals,
+and also know what resources they require to perform them.  Agents can be
+coded to subsume other agents upon successful completion.  In addition, it
+is designed from the beginning to support the creation of simple
+human-computational workflows.</p>
+
+<p><a href="SpreadsheetAgent.html">SpreadsheetAgent</a> requires GoogleDrive,
+and works with a Google Spreadsheet with some or all worksheets formatted
+according to the following:</p>
+<ul><li>
+<p>The top row of a page to be processed has fields for all entry record in
+subsequent rows</p>
+</li><li>
+<p>You can define any fields necessary, but you must specify a ‘ready’ and a
+‘complete’ field</p>
+</li><li>
+<p>You must define at least 1 key field, and the key field must be specified
+as required in the :config (see <a
+href="SpreadsheetAgent/Db.html">SpreadsheetAgent::Db</a>)</p>
+</li><li>
+<p>You should then define fields named for agent_bin/#{ field_name }_agent.rb
+for each agent that you plan to deploy in your pipeline</p>
+</li></ul>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

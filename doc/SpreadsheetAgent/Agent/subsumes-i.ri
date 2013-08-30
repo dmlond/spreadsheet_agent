@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"subsumes:EFI"%SpreadsheetAgent::Agent#subsumes;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"hArray of fields on the record which this agent subsumes.  If the agent completes successfully these;TI"Kfields will be updated with a 1 in addition to the field for the agent;T:
+@file0FI"lib/spreadsheet_agent.rb;T

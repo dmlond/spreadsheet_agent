@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"sleep_between:EFI"+SpreadsheetAgent::Runner#sleep_between;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"XInteger, Optional (default 5). The number of seconds that the runner sleeps between;TI"(each call to process an entry-goal.;T:
+@file0FI"$lib/spreadsheet_agent/runner.rb;T

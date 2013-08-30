@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"max_selves:EFI"'SpreadsheetAgent::Agent#max_selves;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"dOptional integer.  This works on Linux with ps.  The agent will not attempt to run if there are;TI"!max_selves instances running;T:
+@file0FI"lib/spreadsheet_agent.rb;T
