@@ -1,445 +1,1001 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: SpreadsheetAgent::Runner
+  
+    &mdash; Documentation by YARD 0.8.7.1
+  
+</title>
 
-  <title>Class: SpreadsheetAgent::Runner</title>
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
 
-</head>
-<body id="top" class="class">
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SpreadsheetAgent.html" title="SpreadsheetAgent (module)">SpreadsheetAgent</a></span></span>
+     &raquo; 
+    <span class="title">Runner</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
     </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/spreadsheet_agent/runner_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/spreadsheet_agent/runner.rb">lib/spreadsheet_agent/runner.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+    <iframe id="search_frame"></iframe>
 
-      
-    </div>
+    <div id="content"><h1>Class: SpreadsheetAgent::Runner
+  
+  
+  
+</h1>
 
-    <div id="class-metadata">
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="Db.html" title="SpreadsheetAgent::Db (class)">Db</a></span></span>
       
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link"><a href="Db.html">SpreadsheetAgent::Db</a></p>
-        
-      </div>
-      
-
-      
-
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
+        <ul class="fullTree">
+          <li>Object</li>
           
-          <li><a href="#method-c-new">::new</a></li>
+            <li class="next"><span class='object_link'><a href="Db.html" title="SpreadsheetAgent::Db (class)">Db</a></span></li>
           
-          <li><a href="#method-i-only_pages_if">#only_pages_if</a></li>
-          
-          <li><a href="#method-i-process-21">#process!</a></li>
-          
-          <li><a href="#method-i-skip_entry">#skip_entry</a></li>
-          
-          <li><a href="#method-i-skip_goal">#skip_goal</a></li>
-          
-          <li><a href="#method-i-skip_pages_if">#skip_pages_if</a></li>
+            <li class="next">SpreadsheetAgent::Runner</li>
           
         </ul>
-      </div>
+        <a href="#" class="inheritanceTree">show all</a>
       
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/spreadsheet_agent/runner.rb</dd>
+  
+</dl>
+<div class="clear"></div>
 
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
-        
-          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../SpreadsheetAgent.html">SpreadsheetAgent</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Agent.html">SpreadsheetAgent::Agent</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Db.html">SpreadsheetAgent::Db</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Error.html">SpreadsheetAgent::Error</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Runner.html">SpreadsheetAgent::Runner</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
-  </div>
-
-  <div id="documentation">
-    <h1 class="class">SpreadsheetAgent::Runner</h1>
-
-    <div id="description" class="description">
-      
-<p><a href="Runner.html">SpreadsheetAgent::Runner</a> is a class designed to
-facilitate the automated traversal of all, or some defined set of pages,
-entries, and goals defined in a <a
-href="../SpreadsheetAgent.html">SpreadsheetAgent</a> compatible Google
-Spreadsheet, and run agents or processes on them.  By placing a <a
-href="Runner.html">SpreadsheetAgent::Runner</a> script into the scheduling
-system (cron, etc.) on one or more compute nodes, desired pages, entries,
-and goals can be processed efficiently over a period of time, and new
-pages, entries, or goals can be automatically picked up as they are
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>SpreadsheetAgent::Runner is a class designed to facilitate the automated
+traversal of all, or some defined set of pages, entries, and goals defined
+in a SpreadsheetAgent compatible Google Spreadsheet, and run agents or
+processes on them.  By placing a SpreadsheetAgent::Runner script into the
+scheduling system (cron, etc.) on one or more compute nodes, desired pages,
+entries, and goals can be processed efficiently over a period of time, and
+new pages, entries, or goals can be automatically picked up as they are
 introduced.  Runners can be designed to automate the submission of agent
 scripts, check the status of jobs, aggregate information about job status,
 or automate cleanup tasks.</p>
 
-    </div><!-- description -->
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agent_bin-instance_method" title="#agent_bin (instance method)">- (Object) <strong>agent_bin</strong> </a>
+    
 
     
+  </span>
+  
+  
+  
     
     
-    <div id="5Buntitled-5D" class="documentation-section">
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>String Path, Optional.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debug-instance_method" title="#debug (instance method)">- (Object) <strong>debug</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Boolean, Optional (default false).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dry_run-instance_method" title="#dry_run (instance method)">- (Object) <strong>dry_run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Boolean.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#only_pages-instance_method" title="#only_pages (instance method)">- (Object) <strong>only_pages</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Readonly access to the array of pages to be processed.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_fields-instance_method" title="#query_fields (instance method)">- (Object) <strong>query_fields</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Readonly access to the Hash of key_fields, as defined in :config.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_in_serial-instance_method" title="#run_in_serial (instance method)">- (Object) <strong>run_in_serial</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Boolean, Optional (default false).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sleep_between-instance_method" title="#sleep_between (instance method)">- (Object) <strong>sleep_between</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Integer, Optional (default 5).</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Db.html" title="SpreadsheetAgent::Db (class)">Db</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Db.html#config-instance_method" title="SpreadsheetAgent::Db#config (method)">#config</a></span>, <span class='object_link'><a href="Db.html#config_file-instance_method" title="SpreadsheetAgent::Db#config_file (method)">#config_file</a></span>, <span class='object_link'><a href="Db.html#db-instance_method" title="SpreadsheetAgent::Db#db (method)">#db</a></span>, <span class='object_link'><a href="Db.html#session-instance_method" title="SpreadsheetAgent::Db#session (method)">#session</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Runner) <strong>initialize</strong>(attributes = { }) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new SpreadsheetAgent::Runner.</p>
+</div></span>
+  
+</li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#only_pages_if-instance_method" title="#only_pages_if (instance method)">- (Object) <strong>only_pages_if</strong>(&amp;include_code) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provide a PROC desinged to intelligently determine pages to process.</p>
+</div></span>
+  
+</li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process%21-instance_method" title="#process! (instance method)">- (Object) <strong>process!</strong>(&amp;runner_code) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Processes configured pages, entries, and goals with a PROC.</p>
+</div></span>
+  
+</li>
 
       
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skip_entry-instance_method" title="#skip_entry (instance method)">- (Object) <strong>skip_entry</strong>(&amp;skip_code) </a>
+    
 
-        
-        <div id="agent_bin-attribute-method" class="method-detail">
-          <a name="agent_bin"></a>
-          
-          <a name="agent_bin="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">agent_bin</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
 
-          <div class="method-description">
-          
-          <p>String Path, Optional.  The path to the directory containing agent
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provide a PROC desinged to intelligently determine entries on any page to
+skip.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skip_goal-instance_method" title="#skip_goal (instance method)">- (Object) <strong>skip_goal</strong>(&amp;skip_code) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provide a PROC desinged to skip a specific goal in any entry on all pages
+processed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skip_pages_if-instance_method" title="#skip_pages_if (instance method)">- (Object) <strong>skip_pages_if</strong>(&amp;skip_code) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provide a PROC designed to intelligently filter out pages that are not to
+be processed.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Db.html" title="SpreadsheetAgent::Db (class)">Db</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Db.html#build_db-instance_method" title="SpreadsheetAgent::Db#build_db (method)">#build_db</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="SpreadsheetAgent::Runner (class)">Runner</a></span></tt>) <strong>initialize</strong>(attributes = { }) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new SpreadsheetAgent::Runner.  Can be created with any of the
+following optional attributes:</p>
+<ul><li>
+<p>:skip_pages - raises SpreadsheetAgentError if passed along with :only_pages</p>
+</li><li>
+<p>:only_pages - raises SpreadsheetAgentError if passed along with :skip_pages</p>
+</li><li>
+<p>:dry_run</p>
+</li><li>
+<p>:run_in_serial</p>
+</li><li>
+<p>:debug</p>
+</li><li>
+<p>:config_file (see SpreadsheetAgent::Db)</p>
+</li><li>
+<p>:sleep_between</p>
+</li><li>
+<p>:agent_bin</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:skip_pages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:only_pages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>SpreadsheetAgentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You cannot construct a runner with both only_pages and skip_pages</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@dry_run</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:dry_run</span><span class='rbracket'>]</span>
+  <span class='ivar'>@run_in_serial</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:run_in_serial</span><span class='rbracket'>]</span>
+  <span class='ivar'>@debug</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:debug</span><span class='rbracket'>]</span>
+  <span class='ivar'>@config_file</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:config_file</span><span class='rbracket'>]</span>
+
+  <span class='ivar'>@sleep_between</span> <span class='op'>=</span> <span class='int'>5</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:sleep_between</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@sleep_between</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:sleep_between</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@agent_bin</span> <span class='op'>=</span> <span class='id identifier rubyid_find_bin'>find_bin</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>../agent_bin</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:agent_bin</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@agent_bin</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:agent_bin</span><span class='rbracket'>]</span>      
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:skip_pages</span><span class='rbracket'>]</span>
+    <span class='ivar'>@skip_pages</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:skip_pages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:only_pages</span><span class='rbracket'>]</span>
+    <span class='ivar'>@only_pages</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:only_pages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_build_db'>build_db</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@query_fields</span> <span class='op'>=</span> <span class='id identifier rubyid_build_query_fields'>build_query_fields</span><span class='lparen'>(</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@skip_pages</span>
+    <span class='id identifier rubyid_skip_pages_if'>skip_pages_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_page'>page</span><span class='op'>|</span>
+      <span class='ivar'>@skip_pages</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_page'>page</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@dry_run</span>
+    <span class='ivar'>@debug</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="agent_bin=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="agent_bin-instance_method">
+  
+    - (<tt>Object</tt>) <strong>agent_bin</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>String Path, Optional.  The path to the directory containing agent
 executable programs that the default process PROC executes.  The default is
 the ../agent_bin directory relative to the directory containing the calling
 script, $0.</p>
-          
-          </div>
-        </div>
-        
-        <div id="debug-attribute-method" class="method-detail">
-          <a name="debug"></a>
-          
-          <a name="debug="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">debug</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
 
-          <div class="method-description">
-          
-          <p>Boolean, Optional (default false). If true, information about pages,
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_bin'>agent_bin</span>
+  <span class='ivar'>@agent_bin</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="debug=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="debug-instance_method">
+  
+    - (<tt>Object</tt>) <strong>debug</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Boolean, Optional (default false). If true, information about pages,
 entries, and goals that are checked and filtered is printed to STDERR.</p>
-          
-          </div>
-        </div>
-        
-        <div id="dry_run-attribute-method" class="method-detail">
-          <a name="dry_run"></a>
-          
-          <a name="dry_run="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">dry_run</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
 
-          <div class="method-description">
-          
-          <p>Boolean. Optional (default false). If true, run will generate the commands
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_debug'>debug</span>
+  <span class='ivar'>@debug</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="dry_run=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="dry_run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>dry_run</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Boolean. Optional (default false). If true, run will generate the commands
 that it would run for all runnable entry-goals, print them to STDERR, but
 not actually run the commands. Automatically sets debug to 1. Note, if the
-process_entries_with coderef is overridden, <a
-href="Runner.html#attribute-i-dry_run">dry_run</a> is ignored.</p>
-          
-          </div>
-        </div>
-        
-        <div id="only_pages-attribute-method" class="method-detail">
-          <a name="only_pages"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">only_pages</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
+process_entries_with coderef is overridden, dry_run is ignored.</p>
 
-          <div class="method-description">
-          
-          <p>Readonly access to the array of pages to be processed.  Only pages will
-only be defined when :<a
-href="Runner.html#attribute-i-only_pages">only_pages</a> or :skip_pages are
-defined in the constructor params, or when the <a
-href="Runner.html#method-i-skip_pages_if">skip_pages_if</a>, or <a
-href="Runner.html#method-i-only_pages_if">only_pages_if</a> methods are
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dry_run'>dry_run</span>
+  <span class='ivar'>@dry_run</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="only_pages-instance_method">
+  
+    - (<tt>Object</tt>) <strong>only_pages</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Readonly access to the array of pages to be processed.  Only pages will
+only be defined when :only_pages or :skip_pages are defined in the
+constructor params, or when the skip_pages_if, or only_pages_if methods are
 called.</p>
-          
-          </div>
-        </div>
-        
-        <div id="query_fields-attribute-method" class="method-detail">
-          <a name="query_fields"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">query_fields</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
 
-          <div class="method-description">
-          
-          <p>Readonly access to the Hash of field - value key_fields, as defined in
-:config</p>
-          
-          </div>
-        </div>
-        
-        <div id="run_in_serial-attribute-method" class="method-detail">
-          <a name="run_in_serial"></a>
-          
-          <a name="run_in_serial="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">run_in_serial</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
 
-          <div class="method-description">
-          
-          <p>Boolean, Optional (default false). If true, the default
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_only_pages'>only_pages</span>
+  <span class='ivar'>@only_pages</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="query_fields-instance_method">
+  
+    - (<tt>Object</tt>) <strong>query_fields</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Readonly access to the Hash of key_fields, as defined in :config.  The
+runner uses this to construct the commandline for each agent on each entry
+in a page that gets run, with the value of the GoogleDrive::List entry for
+the given 'key' passed as argument in the order specified by the 'rank'
+field for each key in the config.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_fields'>query_fields</span>
+  <span class='ivar'>@query_fields</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="run_in_serial=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="run_in_serial-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run_in_serial</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Boolean, Optional (default false). If true, the default
 process_entries_with PROC runs each agent_script executable in the
 foreground, rather than in the background, thus in serial. If false, all
 agent_script executables are run in parallel, in the background.  This is
 not used when process_entries_with is set to a different PROC.</p>
-          
-          </div>
-        </div>
-        
-        <div id="sleep_between-attribute-method" class="method-detail">
-          <a name="sleep_between"></a>
-          
-          <a name="sleep_between="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">sleep_between</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
 
-          <div class="method-description">
-          
-          <p>Integer, Optional (default 5). The number of seconds that the runner sleeps
-between each call to process an entry-goal.</p>
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
-      
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+  </div>
+</div>
+<div class="tags">
+  
 
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(attributes = { })</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
 
-          <div class="method-description">
-            
-            <p>Create a new <a href="Runner.html">SpreadsheetAgent::Runner</a>.  Can be
-created with any of the following optional attributes:</p>
-<ul><li>
-<p>:skip_pages - raises SpreadsheetAgentError if passed along with :<a
-href="Runner.html#attribute-i-only_pages">only_pages</a></p>
-</li><li>
-<p>:<a href="Runner.html#attribute-i-only_pages">only_pages</a> - raises
-SpreadsheetAgentError if passed along with :skip_pages</p>
-</li><li>
-<p>:<a href="Runner.html#attribute-i-dry_run">dry_run</a></p>
-</li><li>
-<p>:<a href="Runner.html#attribute-i-run_in_serial">run_in_serial</a></p>
-</li><li>
-<p>:debug</p>
-</li><li>
-<p>:config_file (see <a href="Db.html">SpreadsheetAgent::Db</a>)</p>
-</li><li>
-<p>:<a href="Runner.html#attribute-i-sleep_between">sleep_between</a></p>
-</li><li>
-<p>:<a href="Runner.html#attribute-i-agent_bin">agent_bin</a></p>
-</li></ul>
-            
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 28</span>
 
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/runner.rb, line 63</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">attributes</span> = { })
-  <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">attributes</span>[<span class="ruby-value">:skip_pages</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">attributes</span>[<span class="ruby-value">:only_pages</span>].<span class="ruby-identifier">nil?</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">SpreadsheetAgentError</span>, <span class="ruby-string">&quot;You cannot construct a runner with both only_pages and skip_pages&quot;</span>
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-ivar">@dry_run</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:dry_run</span>]
-  <span class="ruby-ivar">@run_in_serial</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:run_in_serial</span>]
-  <span class="ruby-ivar">@debug</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:debug</span>]
-  <span class="ruby-ivar">@config_file</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:config_file</span>]
-
-  <span class="ruby-ivar">@sleep_between</span> = <span class="ruby-value">5</span>
-  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:sleep_between</span>].<span class="ruby-identifier">nil?</span>
-    <span class="ruby-ivar">@sleep_between</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:sleep_between</span>]
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-ivar">@agent_bin</span> = <span class="ruby-identifier">find_bin</span>() <span class="ruby-operator">+</span> <span class="ruby-string">'../agent_bin'</span>
-  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:agent_bin</span>].<span class="ruby-identifier">nil?</span>
-    <span class="ruby-ivar">@agent_bin</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:agent_bin</span>]      
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:skip_pages</span>]
-    <span class="ruby-ivar">@skip_pages</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:skip_pages</span>].<span class="ruby-identifier">clone</span>
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:only_pages</span>]
-    <span class="ruby-ivar">@only_pages</span> = <span class="ruby-identifier">attributes</span>[<span class="ruby-value">:only_pages</span>].<span class="ruby-identifier">clone</span>
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-identifier">build_db</span>()
-  <span class="ruby-ivar">@query_fields</span> = <span class="ruby-identifier">build_query_fields</span>()
-
-  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skip_pages</span>
-    <span class="ruby-identifier">skip_pages_if</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">page</span><span class="ruby-operator">|</span>
-      <span class="ruby-ivar">@skip_pages</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">page</span>
-    <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@dry_run</span>
-    <span class="ruby-ivar">@debug</span> = <span class="ruby-keyword">true</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- new-method -->
-
-      
-      </div><!-- public-class-method-details -->
+<span class='kw'>def</span> <span class='id identifier rubyid_run_in_serial'>run_in_serial</span>
+  <span class='ivar'>@run_in_serial</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
-
       
-        <div id="only_pages_if-method" class="method-detail ">
-          <a name="method-i-only_pages_if"></a>
+      <span id="sleep_between=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sleep_between-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sleep_between</strong> 
+  
 
-          
-          <div class="method-heading">
-            <span class="method-name">only_pages_if</span><span
-              class="method-args">(&include_code)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+  
 
-          <div class="method-description">
-            
-            <p>Provide a PROC desinged to intelligently determine pages to process. If not
-called, all pages not affected by the :skip_pages, or :<a
-href="Runner.html#attribute-i-only_pages">only_pages</a> constructor
-params, or a previous call to <a
-href="Runner.html#method-i-skip_pages_if">skip_pages_if</a> will be
-processed. This will override <a
-href="Runner.html#attribute-i-only_pages">only_pages</a>, or skip_pages
-passed as arguments to the constructor, and any previous call to <a
-href="Runner.html#method-i-skip_pages_if">skip_pages_if</a>, or
-only_pages_if.  The PROC should take the title of a page as a string, and
-return true if a process decides to include the page, false otherwise. Must
-be called before the process! method to affect the pages it processes. 
-Returns the runner self to facilitate chained processing with <a
-href="Runner.html#method-i-skip_goal">skip_goal</a>, <a
-href="Runner.html#method-i-skip_entry">skip_entry</a>, and/or process! if
-desired.</p>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Integer, Optional (default 5). The number of seconds that the runner sleeps
+between each call to process an entry-goal.</p>
 
-<pre>include only pages whose title begins with 'foo'
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sleep_between'>sleep_between</span>
+  <span class='ivar'>@sleep_between</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="only_pages_if-instance_method">
+  
+    - (<tt>Object</tt>) <strong>only_pages_if</strong>(&amp;include_code) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provide a PROC desinged to intelligently determine pages to process. If not
+called, all pages not affected by the :skip_pages, or :only_pages
+constructor params, or a previous call to skip_pages_if will be processed.
+This will override only_pages, or skip_pages passed as arguments to the
+constructor, and any previous call to skip_pages_if, or only_pages_if.  The
+PROC should take the title of a page as a string, and return true if a
+process decides to include the page, false otherwise. Must be called before
+the process! method to affect the pages it processes.  Returns the runner
+self to facilitate chained processing with skip_goal, skip_entry, and/or
+process! if desired.</p>
+
+<pre class="code ruby"><code class="ruby">include only pages whose title begins with 'foo'
 runner.only_pages_if {|title| title.match(/^foo/)}.process!
 
 Same, but without calling process so that skip_entry or skip_goal can be called on the runner
@@ -447,71 +1003,75 @@ runner.only_pages_if do |title|
   title.match(/^foo/)
 end
 ... can call skip_entry, skip_goal
-runner.process!</pre>
-            
+runner.process!</code></pre>
 
-            
-            <div class="method-source-code" id="only_pages_if-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/runner.rb, line 148</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">only_pages_if</span>(&amp;<span class="ruby-identifier">include_code</span>)
-  <span class="ruby-ivar">@only_pages</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">worksheets</span>.<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">title</span> }.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ptitle</span><span class="ruby-operator">|</span> <span class="ruby-identifier">include_code</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">ptitle</span>) }
-  <span class="ruby-keyword">self</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- only_pages_if-source -->
-            
-          </div>
 
-          
+  </div>
+</div>
+<div class="tags">
+  
 
-          
-        </div><!-- only_pages_if-method -->
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-      
-        <div id="process-21-method" class="method-detail ">
-          <a name="method-i-process-21"></a>
 
-          
-          <div class="method-heading">
-            <span class="method-name">process!</span><span
-              class="method-args">(&runner_code)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 152</span>
 
-          <div class="method-description">
-            
-            <p>Processes configured pages, entries, and goals with a PROC.  The default
-PROC takes the entry, iterates over each goal not skipped by <a
-href="Runner.html#method-i-skip_goal">skip_goal</a>, and:</p>
+<span class='kw'>def</span> <span class='id identifier rubyid_only_pages_if'>only_pages_if</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_include_code'>include_code</span><span class='rparen'>)</span>
+  <span class='ivar'>@only_pages</span> <span class='op'>=</span> <span class='ivar'>@db</span><span class='period'>.</span><span class='id identifier rubyid_worksheets'>worksheets</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_ptitle'>ptitle</span><span class='op'>|</span> <span class='id identifier rubyid_include_code'>include_code</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_ptitle'>ptitle</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>process!</strong>(&amp;runner_code) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Processes configured pages, entries, and goals with a PROC.  The default
+PROC takes the entry, iterates over each goal not skipped by skip_goal,
+and:</p>
 <ul><li>
-<p>determines if an executable #{ @<a
-href="Runner.html#attribute-i-agent_bin">agent_bin</a> }/#{ goal }_agent.rb
-script exists</p>
+<p>determines if an executable #{ @agent_bin }/#{ goal }_agent.rb script
+exists</p>
 </li><li>
 <p>if so, executes the goal_agent script with commandline arguments
-constructed from the values in the entry for each field in the <a
-href="Runner.html#attribute-i-query_fields">query_fields</a> array defined
-in config.</p>
+constructed from the values in the entry for each field in the query_fields
+array defined in config.</p>
 </li></ul>
 
-<p>If <a href="Runner.html#attribute-i-run_in_serial">run_in_serial</a> is
-false, the default PROC runs each agent in the background, in parallel.
-Otherwise, it runs each serially in the foreground.  If <a
-href="Runner.html#attribute-i-dry_run">dry_run</a> is true, the command is
-printed to STDERR, but is not run. A PROC supplied to override the default
-PROC should take an GoogleDrive::List, and GoogleDrive::Worksheet as
-arguments. This allows the process to query the entry for information using
-its hash access, and/or update the entry on the spreadsheet. In order for
-changes to the GoogleDrive::List to take effect, the GoogleDrive::Worksheet
-must be saved in the PROC. The process sleeps @<a
-href="Runner.html#attribute-i-sleep_between">sleep_between</a> between each
-call to the PROC (default or otherwise).  If <a
-href="Runner.html#attribute-i-dry_run">dry_run</a> is true when a PROC is
-supplied, the page.title and runnable_entry hash inspection are printed to
-STDERR but the PROC is not called.</p>
+<p>If run_in_serial is false, the default PROC runs each agent in the
+background, in parallel. Otherwise, it runs each serially in the
+foreground.  If dry_run is true, the command is printed to STDERR, but is
+not run. A PROC supplied to override the default PROC should take an
+GoogleDrive::List, and GoogleDrive::Worksheet as arguments. This allows the
+process to query the entry for information using its hash access, and/or
+update the entry on the spreadsheet. In order for changes to the
+GoogleDrive::List to take effect, the GoogleDrive::Worksheet must be saved
+in the PROC. The process sleeps @sleep_between between each call to the
+PROC (default or otherwise).  If dry_run is true when a PROC is supplied,
+the page.title and runnable_entry hash inspection are printed to STDERR but
+the PROC is not called.</p>
 
-<pre> # call each goal agent script in agent_bin on each entry in each page
+<pre class="code ruby"><code class="ruby"> # call each goal agent script in agent_bin on each entry in each page
  runner = SpreadsheetAgent::Runer.new
  runner.process!
 
@@ -522,63 +1082,78 @@ STDERR but the PROC is not called.</p>
 
 # only process entries on the 'main' page where the threshold has not been exceeded
 runner.only_pages = ['main']
-runner.skip_entry{|entry| entry['threshold'] != 1 }.process!</pre>
-            
+runner.skip_entry{|entry| entry['threshold'] != 1 }.process!</code></pre>
 
-            
-            <div class="method-source-code" id="process-21-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/runner.rb, line 223</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">process!</span>(&amp;<span class="ruby-identifier">runner_code</span>)
-  <span class="ruby-identifier">get_runnable_entries</span>().<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry_info</span><span class="ruby-operator">|</span>
-    <span class="ruby-identifier">entry_page</span>, <span class="ruby-identifier">runnable_entry</span> = <span class="ruby-identifier">entry_info</span>
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">runner_code</span>.<span class="ruby-identifier">nil?</span>
-      <span class="ruby-identifier">default_process</span>(<span class="ruby-identifier">runnable_entry</span>)
-    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@dry_run</span>
-      <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Would run #{ entry_page.title } #{ runnable_entry.inspect }&quot;</span>
-    <span class="ruby-keyword">else</span>
-      <span class="ruby-identifier">runner_code</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">runnable_entry</span>, <span class="ruby-identifier">entry_page</span>)
-    <span class="ruby-keyword">end</span>
-    <span class="ruby-identifier">sleep</span> <span class="ruby-ivar">@sleep_between</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- process-21-source -->
-            
-          </div>
 
-          
+  </div>
+</div>
+<div class="tags">
+  
 
-          
-        </div><!-- process-21-method -->
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-      
-        <div id="skip_entry-method" class="method-detail ">
-          <a name="method-i-skip_entry"></a>
 
-          
-          <div class="method-heading">
-            <span class="method-name">skip_entry</span><span
-              class="method-args">(&skip_code)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 227</span>
 
-          <div class="method-description">
-            
-            <p>Provide a PROC desinged to intelligently determine entries on any page to
+<span class='kw'>def</span> <span class='id identifier rubyid_process!'>process!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_runner_code'>runner_code</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get_runnable_entries'>get_runnable_entries</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry_info'>entry_info</span><span class='op'>|</span>
+    <span class='id identifier rubyid_entry_page'>entry_page</span><span class='comma'>,</span> <span class='id identifier rubyid_runnable_entry'>runnable_entry</span> <span class='op'>=</span> <span class='id identifier rubyid_entry_info'>entry_info</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_runner_code'>runner_code</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_default_process'>default_process</span><span class='lparen'>(</span><span class='id identifier rubyid_runnable_entry'>runnable_entry</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='ivar'>@dry_run</span>
+      <span class='gvar'>$stderr</span><span class='period'>.</span><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Would run </span><span class='embexpr_beg'>#{</span> <span class='id identifier rubyid_entry_page'>entry_page</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span> <span class='id identifier rubyid_runnable_entry'>runnable_entry</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_runner_code'>runner_code</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_runnable_entry'>runnable_entry</span><span class='comma'>,</span> <span class='id identifier rubyid_entry_page'>entry_page</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_sleep'>sleep</span> <span class='ivar'>@sleep_between</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skip_entry-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skip_entry</strong>(&amp;skip_code) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provide a PROC desinged to intelligently determine entries on any page to
 skip. If not called, all entries on processed pages will be processed. The
 PROC should take a GoogleDrive::List representing the record in the
 spreadsheet, which can be accessed as a Hash with fields as key and that
 fields value as value.  It should return true if the code decides to skip
 processing the entry, false otherwise.  Must be called before the process!
 method to affect the entries on each page that it processes.  Returns the
-runner self to facilitate chained processing with <a
-href="Runner.html#method-i-skip_pages_if">skip_pages_if</a>, <a
-href="Runner.html#method-i-only_pages_if">only_pages_if</a>, <a
-href="Runner.html#method-i-skip_goal">skip_goal</a>, and/or process! if
-desired.</p>
+runner self to facilitate chained processing with skip_pages_if,
+only_pages_if, skip_goal, and/or process! if desired.</p>
 
-<pre>skip entries which have run foo or bar
+<pre class="code ruby"><code class="ruby">skip entries which have run foo or bar
 runner.only_pages_if {|entry| entry['foo'] == 1 || entry['bar'] == 1 }.process!
 
 skip entries that a human reading the spreadsheet has annotated with less than 3.5 in the 'threshold' field
@@ -586,115 +1161,122 @@ runner.only_pages_if do |entry|
   entry['threshold'] &lt; 3.5
 end
 ... can call skip_pages_if, only_pages_if, skip_goal
-runner.process!</pre>
-            
+runner.process!</code></pre>
 
-            
-            <div class="method-source-code" id="skip_entry-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/runner.rb, line 171</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">skip_entry</span>(&amp;<span class="ruby-identifier">skip_code</span>)
-  <span class="ruby-ivar">@skip_entry_code</span> = <span class="ruby-identifier">skip_code</span>
-  <span class="ruby-keyword">self</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- skip_entry-source -->
-            
-          </div>
 
-          
+  </div>
+</div>
+<div class="tags">
+  
 
-          
-        </div><!-- skip_entry-method -->
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-      
-        <div id="skip_goal-method" class="method-detail ">
-          <a name="method-i-skip_goal"></a>
 
-          
-          <div class="method-heading">
-            <span class="method-name">skip_goal</span><span
-              class="method-args">(&skip_code)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+175
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 175</span>
 
-          <div class="method-description">
-            
-            <p>Provide a PROC desinged to skip a specific goal in any entry on all pages
+<span class='kw'>def</span> <span class='id identifier rubyid_skip_entry'>skip_entry</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_skip_code'>skip_code</span><span class='rparen'>)</span>
+  <span class='ivar'>@skip_entry_code</span> <span class='op'>=</span> <span class='id identifier rubyid_skip_code'>skip_code</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skip_goal-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skip_goal</strong>(&amp;skip_code) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provide a PROC desinged to skip a specific goal in any entry on all pages
 processed. If not called, all goals of each entry and page to be processed
 by the runner will be processed.</p>
 
-<pre>[note!] Ignored when a PROC is passed to the process! method, e.g. it is only used when process! executes
-agent scripts for the goal.</pre>
+<pre class="code ruby"><code class="ruby">[note!] Ignored when a PROC is passed to the process! method, e.g. it is only used when process! executes
+agent scripts for the goal.</code></pre>
 
 <p>The PROC should take a string, which will be one of the header fields in
 the spreadsheet.  It should return true if that goal is to be skipped,
 falsed otherwise. Returns the runner self to facilitate chained processing
-with <a href="Runner.html#method-i-skip_pages_if">skip_pages_if</a>, <a
-href="Runner.html#method-i-only_pages_if">only_pages_if</a>, <a
-href="Runner.html#method-i-skip_entry">skip_entry</a>, and/or process! if
-desired.</p>
+with skip_pages_if, only_pages_if, skip_entry, and/or process! if desired.</p>
 
-<pre>skip the 'post_process' goal on each entry of each page processed
-runner.skip_goal{|goal| goal == 'post_process' }.process!</pre>
+<pre class="code ruby"><code class="ruby">skip the 'post_process' goal on each entry of each page processed
+runner.skip_goal{|goal| goal == 'post_process' }.process!</code></pre>
 
-<p>This is best when used in conjunction with <a
-href="Runner.html#method-i-skip_entry">skip_entry</a> to skip_goals for
+<p>This is best when used in conjunction with skip_entry to skip_goals for
 particular entries runner.skip_entry{|entry| <a
-href="http://'threshold'">entry</a> &lt; 2.5 }.<a
-href="Runner.html#method-i-skip_goal">skip_goal</a>{|goal| goal ==
-‘post_process’ }.process!</p>
-            
+href="http://'threshold'">entry</a> &lt; 2.5 }.skip_goal{|goal| goal ==
+'post_process' }.process!</p>
 
-            
-            <div class="method-source-code" id="skip_goal-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/runner.rb, line 191</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">skip_goal</span>(&amp;<span class="ruby-identifier">skip_code</span>)
-  <span class="ruby-ivar">@skip_goal_code</span> = <span class="ruby-identifier">skip_code</span>
-  <span class="ruby-keyword">self</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- skip_goal-source -->
-            
-          </div>
 
-          
+  </div>
+</div>
+<div class="tags">
+  
 
-          
-        </div><!-- skip_goal-method -->
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-      
-        <div id="skip_pages_if-method" class="method-detail ">
-          <a name="method-i-skip_pages_if"></a>
 
-          
-          <div class="method-heading">
-            <span class="method-name">skip_pages_if</span><span
-              class="method-args">(&skip_code)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 195</span>
 
-          <div class="method-description">
-            
-            <p>Provide a PROC designed to intelligently filter out pages that are not to
-be processed. If not called, all pages not defined in :<a
-href="Runner.html#attribute-i-only_pages">only_pages</a>, or :skip_pages
-parameters in the constructor, or a previous call to <a
-href="Runner.html#method-i-only_pages_if">only_pages_if</a> will be
-processed. This will override <a
-href="Runner.html#attribute-i-only_pages">only_pages</a>, or skip_pages
-passed as arguments to the constructor, and any previous call to <a
-href="Runner.html#method-i-skip_pages_if">skip_pages_if</a>, or
-only_pages_if.  The PROC should take the title of a page as a string, and
-return true if a process decides to skip the page, false otherwise. Must be
-called before the process! method to affect the pages it processes. 
-Returns the runner self to facilitate chained processing with <a
-href="Runner.html#method-i-skip_goal">skip_goal</a>, <a
-href="Runner.html#method-i-skip_entry">skip_entry</a>, and/or process! if
-desired.</p>
+<span class='kw'>def</span> <span class='id identifier rubyid_skip_goal'>skip_goal</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_skip_code'>skip_code</span><span class='rparen'>)</span>
+  <span class='ivar'>@skip_goal_code</span> <span class='op'>=</span> <span class='id identifier rubyid_skip_code'>skip_code</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skip_pages_if-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skip_pages_if</strong>(&amp;skip_code) 
+  
 
-<pre>skip pages whose title contains 'skip'
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provide a PROC designed to intelligently filter out pages that are not to
+be processed. If not called, all pages not defined in :only_pages, or
+:skip_pages parameters in the constructor, or a previous call to
+only_pages_if will be processed. This will override only_pages, or
+skip_pages passed as arguments to the constructor, and any previous call to
+skip_pages_if, or only_pages_if.  The PROC should take the title of a page
+as a string, and return true if a process decides to skip the page, false
+otherwise. Must be called before the process! method to affect the pages it
+processes.  Returns the runner self to facilitate chained processing with
+skip_goal, skip_entry, and/or process! if desired.</p>
+
+<pre class="code ruby"><code class="ruby">skip pages whose title contains 'skip'
 runner.skip_pages_if {|title| title.match(/skip/) }.process!
 
 Same, but without calling process so that skip_entry or skip_goal can be called on the runner
@@ -702,40 +1284,46 @@ runner.skip_pages_if do |title|
   title.match(/skip/)
 end
 ... can call skip_entry, skip_goal, etc
-runner.process!</pre>
-            
+runner.process!</code></pre>
 
-            
-            <div class="method-source-code" id="skip_pages_if-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/runner.rb, line 124</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">skip_pages_if</span>(&amp;<span class="ruby-identifier">skip_code</span>)
-  <span class="ruby-ivar">@only_pages</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">worksheets</span>.<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">title</span> }.<span class="ruby-identifier">reject</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">ptitle</span><span class="ruby-operator">|</span> <span class="ruby-identifier">skip_code</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">ptitle</span>) }
-  <span class="ruby-keyword">self</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- skip_pages_if-source -->
-            
-          </div>
 
-          
-
-          
-        </div><!-- skip_pages_if-method -->
-
-      
-      </div><!-- public-instance-method-details -->
-    
-    </div><!-- 5Buntitled-5D -->
+  </div>
+</div>
+<div class="tags">
   
 
-  </div><!-- documentation -->
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
+
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/runner.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_skip_pages_if'>skip_pages_if</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_skip_code'>skip_code</span><span class='rparen'>)</span>
+  <span class='ivar'>@only_pages</span> <span class='op'>=</span> <span class='ivar'>@db</span><span class='period'>.</span><span class='id identifier rubyid_worksheets'>worksheets</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_ptitle'>ptitle</span><span class='op'>|</span> <span class='id identifier rubyid_skip_code'>skip_code</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_ptitle'>ptitle</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
-</body>
-</html>
+</div>
 
+    <div id="footer">
+  Generated on Wed Sep 18 09:38:24 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

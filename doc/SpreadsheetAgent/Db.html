@@ -1,285 +1,541 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: SpreadsheetAgent::Db
+  
+    &mdash; Documentation by YARD 0.8.7.1
+  
+</title>
 
-  <title>Class: SpreadsheetAgent::Db</title>
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
 
-</head>
-<body id="top" class="class">
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/spreadsheet_agent/db_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/spreadsheet_agent/db.rb">lib/spreadsheet_agent/db.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
-      
-    </div>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
-
-      
-
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-i-build_db">#build_db</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
-        
-          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../SpreadsheetAgent.html">SpreadsheetAgent</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Agent.html">SpreadsheetAgent::Agent</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Db.html">SpreadsheetAgent::Db</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Error.html">SpreadsheetAgent::Error</a></li>
-        
-          <li><a href="../SpreadsheetAgent/Runner.html">SpreadsheetAgent::Runner</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
-  </div>
-
-  <div id="documentation">
-    <h1 class="class">SpreadsheetAgent::Db</h1>
-
-    <div id="description" class="description">
-      
-<p><a href="Db.html">SpreadsheetAgent::Db</a> is a class that is meant to be
-extended by <a href="../SpreadsheetAgent.html">SpreadsheetAgent</a>
-classes.  It stores shared code to instantiate and provide access to a
-GoogleDrive object and GoogleDrive::Spreadsheet object for use by the
-extending classes to access their Google Spreadsheets</p>
-
-    </div><!-- description -->
-
-    
-    
-    
-    <div id="5Buntitled-5D" class="documentation-section">
-      
-
-      
-
-      
-
-      
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
-        
-        <div id="config-attribute-method" class="method-detail">
-          <a name="config"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">config</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          <p>This holds the hash that is constructed from the YAML :config_file. It
-cannot be changed after the object is constructed</p>
-          
-          </div>
-        </div>
-        
-        <div id="config_file-attribute-method" class="method-detail">
-          <a name="config_file"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">config_file</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          <p>Passing this attribute to the constructor will override the location of
-config/agent.conf.yml. If passed, it must be a path to a file which matches
-the template in config/agent.conf.yml. The default is to load
-config/agent.config.yaml relative to the directory containing the calling
-script $0.  This cannot be changed after the object is constructed</p>
-          
-          </div>
-        </div>
-        
-        <div id="db-attribute-method" class="method-detail">
-          <a name="db"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">db</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          <p>This holds the GoogleDrive::Spreadsheet object that can be used to query
-information from the google spreadsheet using its API.  It cannot be
-changed after the object is constructed</p>
-          
-          </div>
-        </div>
-        
-        <div id="session-attribute-method" class="method-detail">
-          <a name="session"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">session</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          <p>This holds the GoogleDrive object instantiated with the guser and gpass in
-the :config. It cannot be changed after the object is constructed</p>
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
-      
-
-      <!-- Methods -->
-      
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
-
-      
-        <div id="build_db-method" class="method-detail ">
-          <a name="method-i-build_db"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">build_db</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>This is for internal use by SpreadsheetAget classes that extend <a
-href="Db.html">SpreadsheetAgent::Db</a></p>
-            
-
-            
-            <div class="method-source-code" id="build_db-source">
-<pre>
-<span class="ruby-comment"># File lib/spreadsheet_agent/db.rb, line 30</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">build_db</span>
-  <span class="ruby-identifier">build_config</span>()
-  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">'key_fields'</span>].<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">'key_fields'</span>][<span class="ruby-identifier">k</span>][<span class="ruby-string">'required'</span>] }.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">SpreadsheetAgentError</span>, <span class="ruby-string">&quot;Your configuration must have at least one required key_fields key&quot;</span>
-  <span class="ruby-keyword">end</span>
-  <span class="ruby-ivar">@session</span> = <span class="ruby-constant">GoogleDrive</span>.<span class="ruby-identifier">login</span>(<span class="ruby-ivar">@config</span>[<span class="ruby-string">'guser'</span>], <span class="ruby-ivar">@config</span>[<span class="ruby-string">'gpass'</span>])
-  <span class="ruby-ivar">@db</span> = <span class="ruby-ivar">@session</span>.<span class="ruby-identifier">spreadsheet_by_title</span>(<span class="ruby-ivar">@config</span>[<span class="ruby-string">'spreadsheet_name'</span>])
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- build_db-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- build_db-method -->
-
-      
-      </div><!-- public-instance-method-details -->
-    
-    </div><!-- 5Buntitled-5D -->
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SpreadsheetAgent.html" title="SpreadsheetAgent (module)">SpreadsheetAgent</a></span></span>
+     &raquo; 
+    <span class="title">Db</span>
   
 
-  </div><!-- documentation -->
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: SpreadsheetAgent::Db
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">SpreadsheetAgent::Db</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/spreadsheet_agent/db.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>SpreadsheetAgent::Db is a class that is meant to be extended by
+SpreadsheetAgent classes.  It stores shared code to instantiate and provide
+access to a GoogleDrive object and GoogleDrive::Spreadsheet object for use
+by the extending classes to access their Google Spreadsheets</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Agent.html" title="SpreadsheetAgent::Agent (class)">Agent</a></span>, <span class='object_link'><a href="Runner.html" title="SpreadsheetAgent::Runner (class)">Runner</a></span></p>
+</div>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-instance_method" title="#config (instance method)">- (Object) <strong>config</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This holds the hash that is constructed from the YAML :config_file.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config_file-instance_method" title="#config_file (instance method)">- (Object) <strong>config_file</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Passing this attribute to the constructor will override the location of
+config/agent.conf.yml.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#db-instance_method" title="#db (instance method)">- (Object) <strong>db</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This holds the GoogleDrive::Spreadsheet object that can be used to query
+information from the google spreadsheet using its API.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#session-instance_method" title="#session (instance method)">- (Object) <strong>session</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This holds the GoogleDrive object instantiated with the guser and gpass in
+the :config.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_db-instance_method" title="#build_db (instance method)">- (Object) <strong>build_db</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This is for internal use by SpreadsheetAgent classes that extend
+SpreadsheetAgent::Db.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="config-instance_method">
+  
+    - (<tt>Object</tt>) <strong>config</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This holds the hash that is constructed from the YAML :config_file. It
+cannot be changed after the object is constructed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/db.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
+  <span class='ivar'>@config</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="config_file-instance_method">
+  
+    - (<tt>Object</tt>) <strong>config_file</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Passing this attribute to the constructor will override the location of
+config/agent.conf.yml. If passed, it must be a path to a file which matches
+the template in config/agent.conf.yml. The default is to load
+../config/agent.config.yaml relative to the directory containing the
+calling script $0.  This cannot be changed after the object is constructed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/db.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config_file'>config_file</span>
+  <span class='ivar'>@config_file</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="db-instance_method">
+  
+    - (<tt>Object</tt>) <strong>db</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This holds the GoogleDrive::Spreadsheet object that can be used to query
+information from the google spreadsheet using its API.  It cannot be
+changed after the object is constructed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/db.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_db'>db</span>
+  <span class='ivar'>@db</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="session-instance_method">
+  
+    - (<tt>Object</tt>) <strong>session</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This holds the GoogleDrive object instantiated with the guser and gpass in
+the :config. It cannot be changed after the object is constructed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/db.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_session'>session</span>
+  <span class='ivar'>@session</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
-</body>
-</html>
 
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="build_db-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_db</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This is for internal use by SpreadsheetAgent classes that extend
+SpreadsheetAgent::Db</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spreadsheet_agent/db.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_db'>build_db</span>
+  <span class='id identifier rubyid_build_config'>build_config</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key_fields</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key_fields</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>required</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>SpreadsheetAgentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Your configuration must have at least one required key_fields key</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@session</span> <span class='op'>=</span> <span class='const'>GoogleDrive</span><span class='period'>.</span><span class='id identifier rubyid_login'>login</span><span class='lparen'>(</span><span class='ivar'>@config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>guser</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gpass</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@db</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id identifier rubyid_spreadsheet_by_title'>spreadsheet_by_title</span><span class='lparen'>(</span><span class='ivar'>@config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>spreadsheet_name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Sep 18 09:38:24 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"worksheet:EFI"&SpreadsheetAgent::Agent#worksheet;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"UReadonly access to the GoogleDrive::Worksheet that is being access by the agent.;T:
-@file0FI"lib/spreadsheet_agent.rb;T

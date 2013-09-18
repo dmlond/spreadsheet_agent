@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"dry_run:EFI"%SpreadsheetAgent::Runner#dry_run;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"TBoolean. Optional (default false). If true, run will generate the commands that;TI"Vit would run for all runnable entry-goals, print them to STDERR, but not actually;TI"5run the commands. Automatically sets debug to 1.;TI"QNote, if the process_entries_with coderef is overridden, dry_run is ignored.;T:
-@file0FI"$lib/spreadsheet_agent/runner.rb;T

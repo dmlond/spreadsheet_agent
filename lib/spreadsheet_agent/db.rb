@@ -1,3 +1,6 @@
+# Author: Darin London
+# The license of this source is "MIT Licence"
+
 require 'google_drive'
 require 'psych'
 
@@ -22,11 +25,11 @@ module SpreadsheetAgent
 
 # Passing this attribute to the constructor will override the location of config/agent.conf.yml.
 # If passed, it must be a path to a file which matches the template in config/agent.conf.yml.
-# The default is to load config/agent.config.yaml relative to the directory containing the
+# The default is to load ../config/agent.config.yaml relative to the directory containing the
 # calling script $0.  This cannot be changed after the object is constructed
     attr_reader :config_file
 
-# This is for internal use by SpreadsheetAget classes that extend SpreadsheetAgent::Db
+# This is for internal use by SpreadsheetAgent classes that extend SpreadsheetAgent::Db
     def build_db
       build_config()
       unless @config['key_fields'].keys.select { |k| @config['key_fields'][k]['required'] }.count > 0

@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"agent_bin:EFI"'SpreadsheetAgent::Runner#agent_bin;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"`String Path, Optional.  The path to the directory containing agent executable programs that;TI"[the default process PROC executes.  The default is the ../agent_bin directory relative;TI"8to the directory containing the calling script, $0.;T:
-@file0FI"$lib/spreadsheet_agent/runner.rb;T

@@ -1,3 +1,0 @@
-U:RDoc::Attr[iI"
-debug:EFI"#SpreadsheetAgent::Runner#debug;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"VBoolean, Optional (default false). If true, information about pages, entries, and;TI">goals that are checked and filtered is printed to STDERR.;T:
-@file0FI"$lib/spreadsheet_agent/runner.rb;T

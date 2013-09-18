@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"prerequisites:EFI"*SpreadsheetAgent::Agent#prerequisites;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"jOptional array of prerequisite fields that must contain a 1 in them for the record on the page before;TI""the agent will attempt to run;T:
-@file0FI"lib/spreadsheet_agent.rb;T

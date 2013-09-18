@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"conflicts_with:EFI"+SpreadsheetAgent::Agent#conflicts_with;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"iHash of process_name to number of max_instances.  This works on Linux with ps.  If the agent detects;TI"dthe specified number of max_instances of the given process (based on a line match), it will not;TI"attempt to run;T:
-@file0FI"lib/spreadsheet_agent.rb;T

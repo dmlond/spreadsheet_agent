@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"run_in_serial:EFI"+SpreadsheetAgent::Runner#run_in_serial;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"VBoolean, Optional (default false). If true, the default process_entries_with PROC;TI"Xruns each agent_script executable in the foreground, rather than in the background,;TI"Wthus in serial. If false, all agent_script executables are run in parallel, in the;TI"Xbackground.  This is not used when process_entries_with is set to a different PROC.;T:
-@file0FI"$lib/spreadsheet_agent/runner.rb;T

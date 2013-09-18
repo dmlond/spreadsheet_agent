@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"	keys:EFI"!SpreadsheetAgent::Agent#keys;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Yhash of key-value pairs.  The keys are defined in config/agent.conf.yml.  The values;TI"bspecify the values for those fields in the record on the page for which the agent is running.;TI"dAll keys configured as 'required: 1' in config/agent.conf.yml must be included in the keys hash;T:
-@file0FI"lib/spreadsheet_agent.rb;T

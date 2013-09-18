@@ -1,3 +1,6 @@
+# Author: Darin London
+# The license of this source is "MIT Licence"
+
 module SpreadsheetAgent
 
 # SpreadsheetAgent::Error is an extension of Error that SpreadsheetAgent classes throw

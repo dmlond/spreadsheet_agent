@@ -1,5 +1,6 @@
 # Author: Darin London
-# The license of this source is "New BSD Licence"
+# The license of this source is "MIT Licence"
+
 require 'spreadsheet_agent/db'
 
 module SpreadsheetAgent
@@ -39,7 +40,10 @@ module SpreadsheetAgent
 # to the directory containing the calling script, $0.
     attr_accessor :agent_bin
 
-# Readonly access to the Hash of field - value key_fields, as defined in :config
+# Readonly access to the Hash of key_fields, as defined in :config.  The runner uses this to construct
+# the commandline for each agent on each entry in a page that gets run, with the value of the
+# GoogleDrive::List entry for the given 'key' passed as argument in the order specified by the
+# 'rank' field for each key in the config.
     attr_reader :query_fields
 
 # Readonly access to the array of pages to be processed.  Only pages will only be defined

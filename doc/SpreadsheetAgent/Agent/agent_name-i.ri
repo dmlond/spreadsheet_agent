@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"agent_name:EFI"'SpreadsheetAgent::Agent#agent_name;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NThe name of the field in the page to which the agent should report status;T:
-@file0FI"lib/spreadsheet_agent.rb;T

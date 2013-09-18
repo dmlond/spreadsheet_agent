@@ -1,5 +1,6 @@
 require 'rake'
 require 'rake/testtask'
+require 'yard'
 
 desc "Run all unit tests"
 task :default => [:db, :agent, :runner]
@@ -25,3 +26,7 @@ Rake::TestTask.new do |t|
 end
 
 task :runner => [:db]
+
+YARD::Rake::YardocTask.new do |t|
+  t.files   = ['lib/**/*.rb']   # optional
+end

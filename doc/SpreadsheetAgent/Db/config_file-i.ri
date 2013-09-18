@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"config_file:EFI"%SpreadsheetAgent::Db#config_file;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"cPassing this attribute to the constructor will override the location of config/agent.conf.yml.;TI"`If passed, it must be a path to a file which matches the template in config/agent.conf.yml.;TI"]The default is to load config/agent.config.yaml relative to the directory containing the;TI"Ocalling script $0.  This cannot be changed after the object is constructed;T:
-@file0FI" lib/spreadsheet_agent/db.rb;T

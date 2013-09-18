@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"query_fields:EFI"*SpreadsheetAgent::Runner#query_fields;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"SReadonly access to the Hash of field - value key_fields, as defined in :config;T:
-@file0FI"$lib/spreadsheet_agent/runner.rb;T
