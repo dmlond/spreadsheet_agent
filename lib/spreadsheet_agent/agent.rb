@@ -69,15 +69,16 @@ module SpreadsheetAgent
     attr_reader :worksheet
 
 # create a new SpreadsheetAgent::Agent
-# @param [String] agent_name REQUIRED
-# @param [String] page_name REQUIRED
-# @param [Hash] keys REQUIRED
-# @param [String] config_file (see SpreadsheetAgent::DB)
-# @param [Boolean] debug
-# @param [Array] prerequisites
-# @param [Integer] max_selves
-# @param [Hash] conflicts_with
-# @param [Array] subsumes
+# @param attributes [Hash] keys are the attribute names, values are their values
+# @option attributes [String] agent_name REQUIRED
+# @option attributes [String] page_name REQUIRED
+# @option attributes [Hash] keys REQUIRED
+# @option attributes [String] config_file (see SpreadsheetAgent::DB)
+# @option attributes [Boolean] debug
+# @option attributes [Array] prerequisites
+# @option attributes [Integer] max_selves
+# @option attributes [Hash] conflicts_with
+# @option attributes [Array] subsumes
     def initialize(attributes)
       @agent_name = attributes[:agent_name]
       @page_name = attributes[:page_name]
@@ -104,7 +105,7 @@ module SpreadsheetAgent
     end
 
 # If the agent does not have any conflicting processes (max_selves or conflicts_with)
-# and if the entry is ready (field 'ready' has a 1), and any supplied prerequisite fields have a 1,
+# and if the entry field 'ready' has a 1, and any supplied prerequisite fields have a 1,
 # gets the GoogleDrive::List[http://rubydoc.info/gems/google_drive/0.3.6/GoogleDrive/List] record, and
 # passes it to the supplied Proc. This PROC must return a required boolean field indicating success or failure,
 # and an optional hash of key - value fields that will be updated on the GoogleDrive::List record.  Note, the updates
@@ -126,7 +127,7 @@ module SpreadsheetAgent
 #     [true, {:notice => 'There were 30 files processed'}]
 #   end
 #
-# @example Fails, enters f:#{hostname} in the agent_name field
+# @example Fails, enters f:server_hostname in the agent_name field
 #   $agent->process! do |entry|
 #     false
 #
@@ -144,7 +145,7 @@ module SpreadsheetAgent
 #     end
 #   end
 #
-# @param [Proc] Code to process entry
+# @param agent_code [Proc] Code to process entry
 # @yieldparam [GoogleDrive::List] entry
 # @yieldreturn [Boolean, Hash] success, (optional) hash of fields to update and values to update on the fields
     def process!(&agent_code)
