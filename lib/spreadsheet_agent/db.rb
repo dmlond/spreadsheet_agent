@@ -1,6 +1,3 @@
-# Author: Darin London
-# The license of this source is "MIT Licence"
-
 require 'google_drive'
 require 'psych'
 
