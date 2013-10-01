@@ -13,7 +13,7 @@ class TC_SpreadsheetAgentRunnerTest < Test::Unit::TestCase
 
       unless File.exists? @config_file
         $stderr.puts "You must create a valid test Google Spreadsheet and a valid #{ @config_file } configuration file pointing to it to run the tests. See README.txt file for more information on how to run the tests."
-        exit(1)
+        exit
       end
       @test_agent_bin = find_bin() + 'agent_bin'
       @testing_pages = nil
