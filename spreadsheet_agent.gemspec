@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'spreadsheet_agent'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2013-08-12'
   s.summary     = "SpreadsheetAgent is a framework for creating distributed pipelines across many different servers, each using the same google spreadsheet as a control panel."
   s.description = <<-EOF
@@ -17,7 +17,7 @@ EOF
   s.author     = "Darin London"
   s.license    = "MIT"
   s.email       = 'darin.london@duke.edu'
-  s.files       = Dir["lib/**/*"] + Dir["test/**/*"]
+  s.files       = Dir["lib/**/*"] + Dir["test/**/*"] + ['config/test.config.yml']
   s.test_files = Dir["test/*.rb"]
   s.homepage    =
     'http://rubygems.org/gems/spreadsheet_agent'
