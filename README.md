@@ -157,7 +157,7 @@ taskA:
                                           page_name: google_page,
                                           debug: true,
                                           max_selves: 4, 
-                                          bind_key_fields: {
+                                          keys: {
                                                'arg1': arg1
                                           }
                                           )
@@ -183,7 +183,7 @@ taskB:
                                                 page_name:  google_page,
                                                 debug:  true,
                                                 max_selves:  3, 
-                                                bind_key_fields:  {
+                                                keys:  {
                                                    'arg1':  arg1
                                                 },
                                                 prerequisites:  [ 'taskA' ],
@@ -213,7 +213,7 @@ taskC:
                                                 page_name:  google_page,
                                                 debug:  true,
                                                 max_selves:  4, 
-                                                bind_key_fields:  {
+                                                keys:  {
                                                    'arg1':  arg1
                                                 },
                                                 prerequisites:  [ 'taskA' ],
@@ -242,7 +242,7 @@ taskD:
                                                 page_name:  google_page,
                                                 debug:  true,
                                                 max_selves:  1, 
-                                                bind_key_fields:  {
+                                                keys:  {
                                                   'arg1':  arg1
                                                 },
                                                 prerequisites:  [ 'taskC' ]
@@ -269,7 +269,7 @@ taskE:
                                                 page_name:  google_page,
                                                 debug:  true,
                                                 max_selves:  5, 
-                                                bind_key_fields:  {
+                                                keys:  {
                                                    'arg1':  arg1
                                                 },
                                                 prerequisites:  [ 'taskB', 'taskD' ]
@@ -310,7 +310,7 @@ modified taskB and taskC simply change their google_agent constructor to have:
                                                 page_name: google_page,
                                                debug:  true,
                                                max_selves:  3, 
-                                               bind_key_fields:  {
+                                               keys:  {
                                                  'arg1':  arg1
                                                },
                                                prerequisites:  [ 'taskA_passes_qc' ],
