@@ -244,6 +244,7 @@ module SpreadsheetAgent
       runnable_entries = []
       get_pages_to_process().each do |page|
         $stderr.puts "Processing page " + page.title if @debug
+        page.reload
         runnable_entries += page.list.reject { |check_entry |  @skip_entry_code.nil? ? false : @skip_entry_code.call(check_entry)  }.collect{ |entry| [page, entry] }
       end
 
