@@ -1,6 +1,8 @@
 spreadsheet_agent
 =================
 
+[![spreadsheet_agent API Documentation](https://www.omniref.com/ruby/gems/spreadsheet_agent.png)](https://www.omniref.com/ruby/gems/spreadsheet_agent)
+
 SpreadsheetAgent is a framework for creating massively distributed pipelines
 across many different servers, each using the same google spreadsheet as a
 control panel.  It is extensible, and flexible.  It doesnt specify what
